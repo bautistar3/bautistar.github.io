@@ -221,10 +221,6 @@ footer {
     text-align:right;
 }
 
-footer a {
-    font-size:.75rem;
-    color:darkblue;
-}
 
 article p a:hover,
 footer a:hover {

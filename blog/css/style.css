@@ -1,0 +1,333 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/*   Imported Fonts  */
+
+@font-face {
+
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "josefinslab";
+    src: url('../fonts/serif/josefinslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "robotoslab";
+    src: url('../fonts/serif/robotoslab-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "robotoregular";
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "montserrat";
+    src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*    Typography     */
+
+p {
+    font-family: opensans, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: rozhaone;
+    font-size: 24px;
+}
+
+.highlight {
+    font-family: ultra, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+    text-align: center;
+
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.highlight {
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    border: 1px solid #000;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #E9F2F1;
+    background-color: #78B839;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+/*   General Setup and Defaults      */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width: 100%;
+    min-width: 56.25rem;
+}
+
+.nav {
+    width: 100%;
+}
+
+/*   Layout   */
+
+header {
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+
+
+main{
+    margin: 2rem auto;
+    width: 90%;
+    min-width: 56.25rem;
+}
+
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 3rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    line-height: 2rem;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 2px solid #065C0A;
+    padding-left:  3rem;
+}
+
+aside p {
+    border-bottom: 2px solid #065C0A;
+    padding-bottom: 3rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+time {
+    font-style: italic;
+}
+
+button {
+    display: inline-block;
+    font-family: ultra, Georgia, serif;
+    border: 1px solid #000;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #E9F2F1;
+    background-color: #E02222;
+    box-shadow: 5px 5px 4px -1px #888;
+    font-size: 3rem;
+}
+
+/*   Images and Figures     */
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin-left: 0px;
+}
+
+.article-image {
+    width: 30%;
+    float: left;
+    margin-right: 0.75rem;
+}
+
+.subsection {
+    margin: 4rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.5rem;
+    background-color: #DCD59A;
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/*      Links and Navigation        */
+
+a {
+    text-decoration: none;
+    font-size: 5px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    font-size: 1.75rem;
+    font-family: robotoregular, Arial, sans-serif;
+    color: #78B839;
+    padding-left: 6rem;
+}
+
+nav {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-top: 2px solid #065C0A;
+    border-bottom: 2px solid #065C0A;
+}
+
+/*      Footer      */
+
+footer {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    padding-top: 7rem;
+    
+}
+
+footer a {
+    font-size:.75rem;
+}
+
+publisher {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+cite {
+    grid-column: 2 / 2;
+    grid-row: 1;
+}
+
+.copyright {
+    font-size:.75rem;
+    text-align:left;
+}
+
+.attribution {
+    font-size:.75rem;
+    text-align: right;
+    font-family: opensans, Arial, sans-serif;
+}
